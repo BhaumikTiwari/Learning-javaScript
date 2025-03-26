@@ -24,11 +24,16 @@ console.log(user["full name"]);
 console.log(user[mySym]);
 
 user.email = "tiwaribhaumik5@gmail.com";  // way to override values
-Object.freeze(user); // we are locking the object here so that initial values do not get changed
+//Object.freeze(user); // we are locking the object here so that initial values do not get changed
 user.email = "bhaumik@google.com";  // this line will not throw the error, but new value will also not propogate
 
 user.greeting = function(){
-    console.log("Hello user")
+    console.log("Hello JS user");
 } 
 
-console.log(user.greeting()); 
+user.greetingTwo = function(){
+    console.log(`hello JS user ${this.name}`);
+}
+user.greeting();
+user.greetingTwo();
+console.log(user["email"]);
