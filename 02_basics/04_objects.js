@@ -39,3 +39,15 @@ console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
+
+
+// Object Destructuring
+const course={
+    courseName: "JS",
+    Fee : 999,
+    Duration : "100 hours"
+}
+const {Duration : totalTime} = course;
+console.log(totalTime);
+
+
