@@ -25,3 +25,41 @@ function userLoginMessage(user){
 }
 
 console.log(userLoginMessage("Bhaumik"));
+
+
+function calculatePrice(...product){       // rest operator
+    return product;
+}
+console.log(calculatePrice(209,1033,399));
+
+function calculatePrice2(prod1,prod2,...prod){
+    return prod;
+}
+console.log(calculatePrice2(100,200,500,890));
+
+
+
+const user={
+    username:"Bhaumik",
+    price:1000
+}
+
+function handleUser(anyobject){
+    console.log(`This user is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+//handleUser(user);
+
+handleUser({
+    username:"Sam",
+    price:100
+})
+
+
+const arr=[10,20,30,40];
+
+function returnFirstelement(getarray){
+    return getarray[0];
+}
+
+console.log(returnFirstelement(arr));
